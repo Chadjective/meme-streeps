@@ -11,6 +11,16 @@ const IMAGE_PATHS = [
   '/images/streep-10.jpg',
   '/images/streep-11.jpg',
   '/images/streep-12.jpg',
+  '/images/streep-13.jpg',
+  '/images/streep-14.jpg',
+  '/images/streep-15.jpg',
+  '/images/streep-16.jpg',
+  '/images/streep-17.jpg',
+  '/images/streep-18.jpg',
+  '/images/streep-19.jpg',
+  '/images/streep-20.jpg',
+  '/images/streep-21.jpg',
+  '/images/streep-22.jpg',
 ];
 
 let lastImageIndex = -1;

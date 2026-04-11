@@ -21,7 +21,7 @@ function renderTile(entry: GalleryEntry): string {
   const topHTML = top ? highlightStreepWordsHTML(escapeHtml(top)) : '';
   const bottomHTML = bottom ? highlightStreepWordsHTML(escapeHtml(bottom)) : '';
   const badgeClass = entry.vote === 'streets_ahead' ? 'gallery-item__badge--sa' : 'gallery-item__badge--fts';
-  const badgeText = entry.vote === 'streets_ahead' ? 'STREETS AHEAD' : 'FOR THE STREETS';
+  const badgeText = entry.vote === 'streets_ahead' ? 'STREEPS AHEAD' : 'FOR THE STREEPS';
   const sizeClass =
     entry.quoteText.length > 120
       ? ' gallery-item__text--sm'
