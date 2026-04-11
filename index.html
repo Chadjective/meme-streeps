@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#D4AF37" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Meme Streeps</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <div class="app-header__spacer"></div>
+      <div class="app-header__title">
+        <h1 class="app-title">MEME STREEPS</h1>
+        <p class="app-subtitle">the misquote generator</p>
+      </div>
+      <button id="gallery-btn" class="icon-btn" aria-label="Gallery">▦</button>
+    </header>
+
+    <div class="vote-counter">
+      <span class="vote-label vote-label--left">← For the Streets <span id="count-left">0</span></span>
+      <span class="vote-label vote-label--right"><span id="count-right">0</span> Streets Ahead →</span>
+    </div>
+
+    <div class="card-container">
+      <div class="edge-flash edge-flash--left"></div>
+      <div class="edge-flash edge-flash--right"></div>
+
+      <div id="meme-card" class="meme-card">
+        <div class="meme-card__inner">
+          <!-- FRONT -->
+          <div class="meme-card__front">
+            <div class="meme-card__image-wrap">
+              <div id="meme-image" class="meme-card__image"></div>
+              <div id="meme-text-top" class="meme-card__text meme-card__text--top"></div>
+              <div id="meme-text-bottom" class="meme-card__text meme-card__text--bottom"></div>
+              <button id="share-btn" class="share-btn-front" aria-label="Share">⇪</button>
+            </div>
+            <div class="meme-card__attribution">
+              <span id="meme-attribution"></span>
+            </div>
+          </div>
+          <!-- BACK -->
+          <div class="meme-card__back">
+            <div class="meme-card__back-content">
+              <p class="back-label">ORIGINAL QUOTE</p>
+              <p id="back-original" class="back-quote"></p>
+              <p id="back-attribution" class="back-attribution"></p>
+              <p id="back-source" class="back-source"></p>
+              <div class="back-meta">
+                <span id="back-category" class="back-tag"></span>
+                <span id="back-collection" class="back-tag"></span>
+              </div>
+              <p class="back-hint">double-tap or swipe down to flip back</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swipe indicators -->
+        <div class="swipe-badge swipe-badge--left">FOR THE STREETS</div>
+        <div class="swipe-badge swipe-badge--right">STREETS AHEAD</div>
+      </div>
+
+      <div class="card-placeholder" id="card-placeholder">
+        <p>SHAKE YOUR PHONE</p>
+        <p class="placeholder-sub">or tap the button below</p>
+      </div>
+    </div>
+
+    <div class="swipe-hints">
+      <span>← FOR THE STREETS</span>
+      <span>STREETS AHEAD →</span>
+    </div>
+
+    <button id="shake-btn" class="shake-btn">📳 SHAKE IT</button>
+  </div>
+
+  <!-- Gallery Screen (slide-in) -->
+  <section id="gallery-screen" class="gallery-screen" hidden>
+    <header class="gallery-header">
+      <button id="gallery-back" class="icon-btn" aria-label="Back">←</button>
+      <h2 class="gallery-header__title">YOUR STREEPS</h2>
+      <span id="gallery-count" class="gallery-header__count">0</span>
+    </header>
+    <div id="gallery-grid" class="gallery-grid"></div>
+    <p id="gallery-empty" class="gallery-empty" hidden>
+      No streeps yet.<br>Shake to start.
+    </p>
+  </section>
+
+  <!-- iOS Motion Permission Modal -->
+  <div id="motion-modal" class="motion-modal" hidden>
+    <div class="motion-modal__content">
+      <h2>Shake to Generate</h2>
+      <p>Meme Streeps wants to detect when you shake your phone to generate new quotes.</p>
+      <button id="motion-allow" class="motion-modal__btn">LET'S GO</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

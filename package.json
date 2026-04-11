@@ -1,0 +1,22 @@
+{
+  "name": "meme-streeps",
+  "private": true,
+  "version": "0.1.0",
+  "description": "The Meryl Streep Misquote Generator — a mobile-first PWA",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "build-quotes": "node scripts/build-quotes.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.101.1"
+  }
+}
