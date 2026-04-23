@@ -10,22 +10,18 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undef
 
 type ChainStub = {
   from: (table: string) => {
-    insert: (payload: unknown) => Promise<{ error: null }> & {
-      then: (cb: (r: { error: null }) => void) => Promise<void>;
-    };
+    insert: (payload: unknown) => Promise<{ error: null }>;
   };
 };
 
 function makeStub(): ChainStub {
-  const noop = Promise.resolve({ error: null });
+  // Every call returns a fresh resolved Promise so the normal Promise.prototype.then
+  // works without interference. The earlier version overrode .then on a shared
+  // Promise instance, which recursed into itself and blew the stack on the first
+  // vote — that's what silently broke shake/generateMeme afterwards.
   return {
     from: () => ({
-      insert: () =>
-        Object.assign(noop, {
-          then: (cb: (r: { error: null }) => void) => noop.then(cb),
-        }) as Promise<{ error: null }> & {
-          then: (cb: (r: { error: null }) => void) => Promise<void>;
-        },
+      insert: () => Promise.resolve({ error: null }),
     }),
   };
 }
