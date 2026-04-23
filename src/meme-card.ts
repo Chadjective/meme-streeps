@@ -2,6 +2,20 @@ import type { Quote } from './quotes';
 
 export const STREEP_REGEX = /\b(Streep\w*|Meryl\w*|Streepl\w*|aStreep\w*|Strept\w*)\b/gi;
 
+/**
+ * Matches any Walken* word (including internal-capital compounds like
+ * sideWalken, jayWalken, Walkenman). Used in V2 mode instead of STREEP_REGEX.
+ */
+export const WALKEN_REGEX = /Walken\w*/g;
+
+export type CardMode = 'streep' | 'walken';
+let currentMode: CardMode = 'streep';
+export function setCardMode(mode: CardMode): void { currentMode = mode; }
+export function getCardMode(): CardMode { return currentMode; }
+function activeRegex(): RegExp {
+  return currentMode === 'walken' ? WALKEN_REGEX : STREEP_REGEX;
+}
+
 const card = () => document.getElementById('meme-card')!;
 const memeImage = () => document.getElementById('meme-image')!;
 const memeTextTop = () => document.getElementById('meme-text-top')!;
@@ -15,7 +29,7 @@ const backCollection = () => document.getElementById('back-collection')!;
 const placeholder = () => document.getElementById('card-placeholder')!;
 
 function highlightStreepWords(text: string): string {
-  return text.replace(STREEP_REGEX, (match) => {
+  return text.replace(activeRegex(), (match) => {
     return `<span class="gold-word">${match}</span>`;
   });
 }

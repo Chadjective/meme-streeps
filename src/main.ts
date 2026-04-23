@@ -1,7 +1,30 @@
 import './style.css';
 import { getRandomQuote, type Quote } from './quotes';
-import { getRandomImage } from './images';
-import { renderMemeCard, resetCard, flipCard, unflipCard, isFlipped } from './meme-card';
+import { getRandomWalkenQuote } from './walken-quotes';
+import { getRandomImage, getWalkenImage } from './images';
+import { renderMemeCard, resetCard, flipCard, unflipCard, isFlipped, setCardMode } from './meme-card';
+
+// ---------------------------------------------------------------------------
+// V2 mode toggle. Visit /?v=walken to switch from Streep (default) to Walken.
+// ---------------------------------------------------------------------------
+const urlParams = new URLSearchParams(window.location.search);
+const MODE: 'streep' | 'walken' = urlParams.get('v') === 'walken' ? 'walken' : 'streep';
+setCardMode(MODE);
+document.documentElement.dataset.mode = MODE;
+
+/**
+ * Swaps every [data-streep][data-walken] element's text to the active mode.
+ * This covers the header title, subtitle, vote counter labels, swipe badges,
+ * swipe hints, gallery header, empty state, motion modal, and <title>.
+ */
+function applyModeLabels(mode: 'streep' | 'walken'): void {
+  const attr = mode === 'walken' ? 'data-walken' : 'data-streep';
+  document.querySelectorAll<HTMLElement>('[data-streep][data-walken]').forEach((el) => {
+    const text = el.getAttribute(attr);
+    if (text != null) el.textContent = text;
+  });
+}
+applyModeLabels(MODE);
 import { initSwipe, type VoteDirection } from './swipe';
 import { initShake } from './shake';
 import { recordVote, incrementSession, getSessionCounts } from './voting';
@@ -31,8 +54,8 @@ async function generateMeme() {
   if (isAnimating) return;
   isAnimating = true;
 
-  const quote = getRandomQuote();
-  const image = getRandomImage();
+  const quote = MODE === 'walken' ? getRandomWalkenQuote() : getRandomQuote();
+  const image = MODE === 'walken' ? getWalkenImage(quote.id) : getRandomImage();
   currentQuote = quote;
   currentImageUrl = image;
 
@@ -121,7 +144,7 @@ shareBtn.addEventListener('click', async (e) => {
 if ('serviceWorker' in navigator) {
   if (import.meta.env.PROD) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js').catch(() => {
+      navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {
         // SW registration failed, app still works
       });
     });

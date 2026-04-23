@@ -83,6 +83,17 @@ function normalizeEntry(collection, entry, index) {
   return { id, quote, streepified, attribution, source, category, collection };
 }
 
+/** Load the exclusion list (long_lost_lore.json) */
+function loadExclusions() {
+  const lorePath = join(ROOT, 'data', 'long_lost_lore.json');
+  try {
+    const lore = JSON.parse(readFileSync(lorePath, 'utf8'));
+    return new Set(lore.entries.map(e => e.id));
+  } catch {
+    return new Set();
+  }
+}
+
 function formatEntry(q) {
   return `  { id: "${q.id}", quote: "${escapeString(q.quote)}", streepified: "${escapeString(q.streepified)}", attribution: "${escapeString(q.attribution)}", source: "${escapeString(q.source)}", category: "${escapeString(q.category)}", collection: "${q.collection}" },`;
 }
@@ -90,6 +101,7 @@ function formatEntry(q) {
 function main() {
   const raw = readFileSync(INPUT, 'utf8');
   const data = JSON.parse(raw);
+  const excluded = loadExclusions();
 
   const all = [];
   const collectionOrder = [
@@ -120,11 +132,15 @@ function main() {
   lines.push('  source: string;');
   lines.push('  category: string;');
   lines.push('  collection: string;');
+  lines.push('  // V2 optional fields (populated by build-walken-quotes.mjs)');
+  lines.push('  memeScore?: number;');
+  lines.push('  walkenReading?: string;');
   lines.push('}');
   lines.push('');
   lines.push('export const QUOTES: Quote[] = [');
 
   let totalCount = 0;
+  let excludedCount = 0;
   for (const name of collectionOrder) {
     const coll = data.collections[name];
     if (!coll || !coll.entries) {
@@ -132,9 +148,14 @@ function main() {
       continue;
     }
     lines.push('');
-    lines.push(`  // ── ${name} (${coll.entries.length} entries) ──`);
+    lines.push(`  // ── ${name} ──`);
     for (let i = 0; i < coll.entries.length; i++) {
       const normalized = normalizeEntry(name, coll.entries[i], i);
+      // Skip quotes in the long_lost_lore exclusion list
+      if (excluded.has(normalized.id)) {
+        excludedCount++;
+        continue;
+      }
       all.push(normalized);
       lines.push(formatEntry(normalized));
       totalCount++;
@@ -186,9 +207,10 @@ function main() {
   }).length;
 
   console.log(`[build-quotes] Wrote ${OUTPUT}`);
-  console.log(`[build-quotes] Total quotes: ${totalCount}`);
+  console.log(`[build-quotes] Total in file: ${totalCount}`);
+  console.log(`[build-quotes] Excluded (long_lost_lore): ${excludedCount}`);
   console.log(`[build-quotes] Valid (showable) quotes: ${validCount}`);
-  console.log(`[build-quotes] Filtered out: ${totalCount - validCount} (no pun word)`);
+  console.log(`[build-quotes] Filtered at runtime (no pun word): ${totalCount - validCount}`);
 }
 
 main();

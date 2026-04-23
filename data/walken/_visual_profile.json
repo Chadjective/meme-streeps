@@ -1,0 +1,116 @@
+{
+  "celebrity": "Christopher Walken",
+  "version": "0.1",
+  "notes": "Shared archetype library. Every entry's image_prompt.archetype field must reference a `key` below. `universal_ridiculous` entries are templates with bracketed slots the builder fills per-quote.",
+  "archetypes": [
+    {
+      "key": "classic_suit",
+      "desc": "black suit, slicked-back silver hair, intense stare, dim backroom lighting, 1990s crime-film mood",
+      "use_for": "philosophy, menace, wisdom delivered coldly"
+    },
+    {
+      "key": "nyc_walker",
+      "desc": "walking alone down a Manhattan side street at dusk, long trenchcoat, hands in pockets, cinematic 35mm",
+      "use_for": "journey quotes, solitude, reflection"
+    },
+    {
+      "key": "dancing",
+      "desc": "mid-leap in an empty hotel lobby, suit flying, weightless, 2001 music-video staging",
+      "use_for": "joy, freedom, unexpected grace"
+    },
+    {
+      "key": "young_lion_tamer",
+      "desc": "teenage performer in a red sequined vest standing beside a calm lioness under a big-top spotlight, circa 1958",
+      "use_for": "fearlessness, origin-story, unlikely courage"
+    },
+    {
+      "key": "home_cook",
+      "desc": "apron over a button-down, standing at a tidy home kitchen stove, holding a pear or a wooden spoon, deadpan expression, soft window light",
+      "use_for": "domestic wisdom, simple pleasures, food references"
+    },
+    {
+      "key": "cowbell_studio",
+      "desc": "1970s recording studio, open silk shirt, medallion, holding a cowbell and a mallet, warm analog glow",
+      "use_for": "absurd enthusiasm, music, comedy beats"
+    },
+    {
+      "key": "war_flashback",
+      "desc": "weathered military uniform, soft-focus jungle backdrop, holding a small heirloom object, melancholy 1970s war-film palette",
+      "use_for": "sacrifice, legacy, heavy wisdom"
+    },
+    {
+      "key": "narrator_throne",
+      "desc": "seated in a high-backed velvet armchair in a shadowy library, one lamp lit, steepled fingers, delivering a monologue to no one",
+      "use_for": "wisdom monologues, cadence-heavy readings, philosophy"
+    },
+    {
+      "key": "angel_or_devil",
+      "desc": "billowing white or black coat, feathers drifting, stylized religious-painting composition, backlit halo or smoke",
+      "use_for": "religion, spirituality, moral dilemmas"
+    },
+    {
+      "key": "suburban_lawn",
+      "desc": "standing in an overly manicured suburban front yard holding garden shears, American flag in background, unsettling normalcy",
+      "use_for": "politics, society, Americana, dark comedy"
+    },
+    {
+      "key": "desert_road",
+      "desc": "walking down an endless two-lane desert highway at golden hour, tiny silhouette, heat shimmer",
+      "use_for": "journey, perseverance, long-haul metaphors"
+    },
+    {
+      "key": "chalkboard_classroom",
+      "desc": "in front of a green chalkboard in an empty classroom, suit and tie, holding chalk, writing one cryptic word",
+      "use_for": "education, leadership, teaching metaphors"
+    }
+  ],
+  "universal_ridiculous": [
+    {
+      "key": "giant_object",
+      "template": "Christopher Walken riding a giant version of [OBJECT_FROM_QUOTE] through a thunderstorm, detailed matte painting"
+    },
+    {
+      "key": "renaissance_oil",
+      "template": "Christopher Walken as a Renaissance oil painting, holding [OBJECT_FROM_QUOTE], gold-leaf frame, dramatic chiaroscuro"
+    },
+    {
+      "key": "claymation",
+      "template": "Claymation Christopher Walken in a 90s music-video set, interacting with [OBJECT_FROM_QUOTE], stop-motion textures"
+    },
+    {
+      "key": "bobblehead",
+      "template": "Christopher Walken bobblehead on a car dashboard, [OBJECT_FROM_QUOTE] visible through the windshield"
+    },
+    {
+      "key": "tarot_card",
+      "template": "Christopher Walken illustrated as a tarot card labeled 'THE [CONCEPT]', ornate border, 1920s occult style"
+    },
+    {
+      "key": "stained_glass",
+      "template": "Stained-glass cathedral window depicting Christopher Walken performing [ACTION], saint's halo, Latin inscription"
+    }
+  ],
+  "prompt_assembly_rules": {
+    "per_entry": "image_prompt.archetype (key) + image_prompt.scene (quote-specific detail) → builder concatenates archetype.desc + ', ' + scene into full_prompt. For universal_ridiculous, builder fills bracketed slots from image_prompt.slots.",
+    "style_suffix": "cinematic, 35mm film grain, high detail — applied by builder unless image_prompt.style_override is set",
+    "score_gating": "only populate image_prompt for meme_score >= 4. Score-3 entries may optionally carry an archetype-only hint."
+  },
+  "gemini_global_settings": {
+    "aspect_ratio": "3:4 portrait",
+    "likeness_anchor": "A man resembling Christopher Walken: silver slicked-back hair, deep-set pale eyes, gaunt angular face, late-60s or early-70s age, distinctive classic features, sharply attentive expression unless otherwise noted",
+    "negative_prompt": "deformed face, extra limbs, extra fingers, malformed hands, watermark, text overlay, subject rendered as a young man, subject rendered as a child, distorted features, uncanny valley, low quality",
+    "technical_suffix": "Portrait 3:4 aspect ratio, highly detailed, professional cinematography, sharp focus, clear subject framing"
+  },
+  "mood_style_routing": {
+    "notes": "Applied by the prompt builder based on entry tags. If multiple moods match, priority is: funny > uplifting > tender > defiant > dark > ominous > (default).",
+    "styles": {
+      "uplifting": "Warm golden palette, bright natural sunlight, subject appears joyful or elated, soft focus, optimistic mood, uplifted expression",
+      "tender": "Soft warm lighting, gentle expression, intimate framing, pastel palette, quiet emotional warmth",
+      "funny": "Bright saturated palette, playful absurd staging, comic energy, subject has amused or wry expression, light-hearted mood",
+      "defiant": "Strong directional lighting, high contrast, bold composition, subject determined and confident, powerful stance",
+      "dark": "Moody chiaroscuro, desaturated cold palette, deep shadows, tension, restrained emotion",
+      "ominous": "Noir styling, near-monochrome, heavy shadows, unsettling atmosphere, implied threat",
+      "default": "Cinematic 35mm film grain, dramatic lighting, balanced mood, classic character framing"
+    }
+  }
+}

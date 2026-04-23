@@ -9,7 +9,10 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "optimize-images": "node scripts/optimize-images.mjs",
-    "build-quotes": "node scripts/build-quotes.mjs"
+    "optimize-walken-images": "node scripts/optimize-walken-images.mjs",
+    "build-quotes": "node scripts/build-quotes.mjs",
+    "build-walken-quotes": "node scripts/build-walken-quotes.mjs",
+    "build-walken-prompts": "node scripts/build-gemini-prompts.mjs && node scripts/build-silly-prompts.mjs"
   },
   "devDependencies": {
     "sharp": "^0.34.5",

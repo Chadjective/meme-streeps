@@ -1,0 +1,29 @@
+{
+  "notes": "Maps the freshly-downloaded Gemini PNGs from Downloads/ to their target filenames under public/images/. Per-entry matches live at the top; pool images at the bottom. Update this file and re-run scripts/optimize-walken-images.mjs when more images arrive.",
+  "source_dir": "C:/Users/LIAMJ/Downloads",
+  "target_dir": "public/images",
+  "mappings": [
+    { "source": "Gemini_Generated_Image_ (56).png", "target": "walk-024.jpg", "entry_id": "walk-024", "desc": "Walken barefoot on eggshells" },
+    { "source": "Gemini_Generated_Image_ (61).png", "target": "walk-101.jpg", "entry_id": "walk-101", "desc": "Matrix-code corridor walk" },
+    { "source": "Gemini_Generated_Image_ (62).png", "target": "walk-094.jpg", "entry_id": "walk-094", "desc": "Forest with walking stick, CN Tower" },
+    { "source": "Gemini_Generated_Image_ (63).png", "target": "walk-040.jpg", "entry_id": "walk-040", "desc": "Dance leap in hotel lobby" },
+    { "source": "Gemini_Generated_Image_ (64).png", "target": "walk-043.jpg", "entry_id": "walk-043", "desc": "Walking through clouds to golden door" },
+    { "source": "Gemini_Generated_Image_ (67).png", "target": "walk-049.jpg", "entry_id": "walk-049", "desc": "Lion in circus tent" },
+    { "source": "Gemini_Generated_Image_ (74).png", "target": "walk-077.jpg", "entry_id": "walk-077", "desc": "King on throne with scepter" },
+    { "source": "Gemini_Generated_Image_ (76).png", "target": "walk-074.jpg", "entry_id": "walk-074", "desc": "Velvet armchair with floating books" },
+
+    { "source": "Gemini_Generated_Image_ (57).png", "target": "walken-01.jpg", "entry_id": null, "desc": "Skateboard ramp" },
+    { "source": "Gemini_Generated_Image_ (58).png", "target": "walken-02.jpg", "entry_id": null, "desc": "Skateboard jump" },
+    { "source": "Gemini_Generated_Image_ (59).png", "target": "walken-03.jpg", "entry_id": null, "desc": "Tulip field with watering can" },
+    { "source": "Gemini_Generated_Image_ (60).png", "target": "walken-04.jpg", "entry_id": null, "desc": "WALKEN WORLD cable-access parody" },
+    { "source": "Gemini_Generated_Image_ (65).png", "target": "walken-05.jpg", "entry_id": null, "desc": "Ballet tutu on stage" },
+    { "source": "Gemini_Generated_Image_ (66).png", "target": "walken-06.jpg", "entry_id": null, "desc": "Walken on the moon with golden swirls" },
+    { "source": "Gemini_Generated_Image_ (68).png", "target": "walken-07.jpg", "entry_id": null, "desc": "Lion circus tent (alt of walk-049)" },
+    { "source": "Gemini_Generated_Image_ (69).png", "target": "walken-08.jpg", "entry_id": null, "desc": "Riding a giant red dog" },
+    { "source": "Gemini_Generated_Image_ (70).png", "target": "walken-09.jpg", "entry_id": null, "desc": "Walking a rainbow through clouds" },
+    { "source": "Gemini_Generated_Image_ (71).png", "target": "walken-10.jpg", "entry_id": null, "desc": "Beach walk at sunset, smiling" },
+    { "source": "Gemini_Generated_Image_ (72).png", "target": "walken-11.jpg", "entry_id": null, "desc": "Moon throne with floating books (alt of walk-074)" },
+    { "source": "Gemini_Generated_Image_ (73).png", "target": "walken-12.jpg", "entry_id": null, "desc": "Crowned king in castle (alt of walk-077)" },
+    { "source": "Gemini_Generated_Image_ (75).png", "target": "walken-13.jpg", "entry_id": null, "desc": "Library under a halo of floating books (alt of walk-074)" }
+  ]
+}

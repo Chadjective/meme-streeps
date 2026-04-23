@@ -1,0 +1,368 @@
+{
+  "collection": "silly_walken",
+  "celebrity": "Christopher Walken",
+  "schema_version": "2.0",
+  "purpose": "Standalone creative/silly image prompts for Gemini — not tied to any quote. Intended for splash screens, loading states, Easter eggs, shareable bonus cards, app decor. Each entry feeds scripts/build-silly-prompts.mjs to produce ready-to-paste prompt blocks in gemini_silly_prompts.md.",
+  "entries": [
+    {
+      "id": "silly-001",
+      "theme": "absurd",
+      "title": "Mall Santa",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "dressed as a red-velvet mall Santa on a gift-wrapped throne, a small child on his lap looks genuinely alarmed mid-photo, a line of tired parents waits behind a velvet rope, tinsel and fake snow everywhere, fluorescent mall lighting"
+    },
+    {
+      "id": "silly-002",
+      "theme": "absurd",
+      "title": "Beekeeper",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "in a full white beekeeper suit with the veil thrown back, calmly holding a honeycomb frame covered in thousands of bees, sunny orchard, at least one bee on the tip of his nose"
+    },
+    {
+      "id": "silly-003",
+      "theme": "absurd",
+      "title": "Yoga instructor",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "in yoga clothes leading a class of confused elderly seniors in a warrior pose, bright airy studio with wood floors, house plants everywhere, his expression is deadly serious"
+    },
+    {
+      "id": "silly-004",
+      "theme": "absurd",
+      "title": "Conveyor sushi chef",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "in a white chef coat and headband behind a conveyor-belt sushi counter, placing a plate of nigiri onto the belt with perfect ceremony, bright Tokyo-diner lighting, a child diner staring wide-eyed"
+    },
+    {
+      "id": "silly-005",
+      "theme": "absurd",
+      "title": "Lawn gnome",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "as a ceramic garden gnome standing motionless among flowerbeds in a suburban lawn, red pointed hat, blue coat, white beard, his face is unmistakably alert and watchful, a squirrel regards him suspiciously"
+    },
+    {
+      "id": "silly-006",
+      "theme": "absurd",
+      "title": "Wax museum figure",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "standing perfectly still as a wax-museum figure on a velvet-roped pedestal, nameplate reads 'WALKEN', two tourists taking a selfie beside him, neither notices he is real, museum spotlighting"
+    },
+    {
+      "id": "silly-007",
+      "theme": "absurd",
+      "title": "Flight attendant safety demo",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "in a navy flight-attendant uniform demonstrating the oxygen-mask safety procedure in a crowded airplane aisle, holding the yellow mask to his face with intense solemnity, bored passengers ignoring him"
+    },
+    {
+      "id": "silly-008",
+      "theme": "absurd",
+      "title": "Sportscaster",
+      "aspect_ratio": "16:9",
+      "mood_override": "funny",
+      "scene": "at a glossy sports-anchor desk in a pressed suit, holding a coffee mug, animated highlight graphics frozen behind him on the video wall, teleprompter mid-sentence"
+    },
+    {
+      "id": "silly-009",
+      "theme": "absurd",
+      "title": "Lighthouse keeper in storm",
+      "aspect_ratio": "16:9",
+      "mood_override": "defiant",
+      "scene": "as a grizzled lighthouse keeper in a yellow slicker battling wind and sea spray on a rocky outcrop, the lighthouse beam cutting through driving rain behind him, waves crashing, single lantern in hand"
+    },
+    {
+      "id": "silly-010",
+      "theme": "absurd",
+      "title": "Ice skating coach",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "in a tracksuit and whistle on indoor ice, arms crossed, watching a wobbly child skater, rink lighting, other skaters going past, his expression is quietly horrified"
+    },
+    {
+      "id": "silly-011",
+      "theme": "absurd",
+      "title": "Grand Canyon guide",
+      "aspect_ratio": "16:9",
+      "mood_override": "uplifting",
+      "scene": "as a park-ranger tour guide in khaki uniform gesturing toward the vast Grand Canyon panorama, small group of tourists listening, golden hour, massive canyon layers in background"
+    },
+    {
+      "id": "silly-012",
+      "theme": "absurd",
+      "title": "Weather forecaster",
+      "aspect_ratio": "16:9",
+      "mood_override": "funny",
+      "scene": "in a blazer standing in front of a bright green weather-map display, pointing at a massive cartoon storm cloud labeled 'WALKENADO', studio lighting, earpiece visible"
+    },
+    {
+      "id": "silly-013",
+      "theme": "absurd",
+      "title": "Balloon-animal artist",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "at a child's birthday party in a vest and bow tie, twisting a balloon dog with enormous focus, terrified birthday child staring up at him, pastel party decorations everywhere"
+    },
+    {
+      "id": "silly-014",
+      "theme": "absurd",
+      "title": "Park chess master",
+      "aspect_ratio": "3:4",
+      "mood_override": "defiant",
+      "scene": "on a weathered park bench in Washington Square Park mid-chess-game against a smug teenager, concrete chess tables, a small crowd watching, his hand hovering over the queen"
+    },
+    {
+      "id": "silly-015",
+      "theme": "absurd",
+      "title": "Subway busker",
+      "aspect_ratio": "3:4",
+      "mood_override": "tender",
+      "scene": "playing a small keyboard on the subway platform in a trenchcoat, open keyboard case with scattered dollar bills, commuters rushing past, one elderly woman pausing to listen, fluorescent platform lighting"
+    },
+    {
+      "id": "silly-016",
+      "theme": "art",
+      "title": "The Walken — tarot card",
+      "aspect_ratio": "3:4",
+      "mood_override": "ominous",
+      "scene": "illustrated as a full tarot card labeled 'THE WALKEN' at the bottom in elegant serif type, ornate gold-leaf border, 1920s occult art-deco style, he holds a lantern in one hand and a rose in the other, faint cosmic stars behind"
+    },
+    {
+      "id": "silly-017",
+      "theme": "art",
+      "title": "Renaissance oil with pear",
+      "aspect_ratio": "3:4",
+      "mood_override": "default",
+      "scene": "painted as a formal 17th-century Dutch oil portrait, dark velvet cloak, white lace collar, holding a single ripe pear in one gloved hand, dramatic chiaroscuro, heavy gold-leaf frame implied at the edges"
+    },
+    {
+      "id": "silly-018",
+      "theme": "art",
+      "title": "Stained glass saint",
+      "aspect_ratio": "3:4",
+      "mood_override": "tender",
+      "scene": "rendered as a medieval cathedral stained-glass window panel, halo behind his head, robes in deep blues and reds, tiny walking cane in one hand, sunlight streaming through the colored glass"
+    },
+    {
+      "id": "silly-019",
+      "theme": "art",
+      "title": "Claymation music video",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "as a stop-motion claymation figure in a surreal 90s music-video set, everything around him made of clay — clay TV, clay couch, clay flowers — he is mid-dance move, obvious fingerprint textures, claymation lighting"
+    },
+    {
+      "id": "silly-020",
+      "theme": "art",
+      "title": "16-bit pixel sprite",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "rendered as a 16-bit SNES-era RPG character sprite on a tiled grass-and-cobblestone background, clearly visible individual pixels, a small dialogue box at the bottom reads 'WALKEN approaches.', retro-videogame aesthetic"
+    },
+    {
+      "id": "silly-021",
+      "theme": "art",
+      "title": "Low-poly PS1 render",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "as a low-polygon 1998-PlayStation-era 3D character model, sharply angular face, visibly blocky hands, flat-shaded low-res textures, standing in a vaporwave grid-floor environment, early-3D-graphics aesthetic"
+    },
+    {
+      "id": "silly-022",
+      "theme": "art",
+      "title": "Illuminated manuscript",
+      "aspect_ratio": "3:4",
+      "mood_override": "default",
+      "scene": "painted in the margins of a medieval illuminated manuscript, gold leaf and Latin-script Lorem Ipsum text around him, he is holding a tiny walking-cane and a snail, vellum-yellow page, crimson and blue pigments"
+    },
+    {
+      "id": "silly-023",
+      "theme": "art",
+      "title": "Sumi-e ink painting",
+      "aspect_ratio": "3:4",
+      "mood_override": "tender",
+      "scene": "rendered as a traditional Japanese sumi-e ink-wash painting on aged rice paper, confident black brush strokes, minimal palette, he stands under a single gnarled pine tree, red seal chop stamp in the corner"
+    },
+    {
+      "id": "silly-024",
+      "theme": "art",
+      "title": "Paleolithic cave painting",
+      "aspect_ratio": "16:9",
+      "mood_override": "funny",
+      "scene": "rendered as an ancient cave painting on a rough stone wall, ochre-and-charcoal pigments, his recognizable silhouette striding alongside stick-figure mammoths and hand prints, torchlight glow on the stone"
+    },
+    {
+      "id": "silly-025",
+      "theme": "art",
+      "title": "Pop-art silkscreen grid",
+      "aspect_ratio": "3:4",
+      "mood_override": "funny",
+      "scene": "replicated in a four-panel pop-art silkscreen grid, each panel tinted differently — hot pink, electric yellow, lime green, cyan — same pose in each cell, thick black ink outlines, 1960s silkscreen-print aesthetic"
+    },
+    {
+      "id": "silly-026",
+      "theme": "art",
+      "title": "Children's picture book",
+      "aspect_ratio": "3:4",
+      "mood_override": "tender",
+      "scene": "illustrated as a friendly character in a hand-painted children's picture book, gentle watercolor style, walking through a storybook forest with a rabbit at his heels and a giant moon overhead, text-free page"
+    },
+    {
+      "id": "silly-027",
+      "theme": "art",
+      "title": "Neon storefront sign",
+      "aspect_ratio": "16:9",
+      "mood_override": "ominous",
+      "scene": "depicted as a glowing neon sign outside a rain-slicked 1980s diner, pink-and-blue tubing forming his unmistakable silhouette, reflections in wet pavement, steam rising from a manhole"
+    },
+    {
+      "id": "silly-028",
+      "theme": "historical",
+      "title": "Egyptian pharaoh",
+      "aspect_ratio": "3:4",
+      "mood_override": "defiant",
+      "scene": "as an Egyptian pharaoh on a golden throne in a torchlit temple, blue-and-gold striped nemes headdress, crook and flail crossed over his chest, hieroglyphs carved into the wall behind him, two sphinx statues flanking the throne"
+    },
+    {
+      "id": "silly-029",
+      "theme": "historical",
+      "title": "Samurai",
+      "aspect_ratio": "3:4",
+      "mood_override": "defiant",
+      "scene": "as a samurai in full black-and-gold armor on a misty mountaintop at dawn, katana drawn and pointed downward, cherry blossoms drifting across the frame, traditional Edo-period costume, distant pagoda"
+    },
+    {
+      "id": "silly-030",
+      "theme": "historical",
+      "title": "Saloon cowboy",
+      "aspect_ratio": "3:4",
+      "mood_override": "defiant",
+      "scene": "as a lean Old West gunslinger in a dusty saloon at high noon, wide-brim hat pulled low, long coat, hand hovering over holstered revolver, piano man frozen mid-note in the background, shafts of sunlight through wooden slats"
+    },
+    {
+      "id": "silly-031",
+      "theme": "historical",
+      "title": "Viking longship captain",
+      "aspect_ratio": "16:9",
+      "mood_override": "defiant",
+      "scene": "as a Viking chieftain at the prow of a longship carving through stormy North-Atlantic seas, horned helmet (inaccurate but iconic), braided beard, fur-lined cloak whipping in the wind, crew rowing behind him"
+    },
+    {
+      "id": "silly-032",
+      "theme": "historical",
+      "title": "Medieval knight",
+      "aspect_ratio": "3:4",
+      "mood_override": "defiant",
+      "scene": "as a medieval knight in full polished plate armor, visor raised, kneeling on one knee in a stone cathedral before a sword laid on an altar, stained-glass light falling across his face"
+    },
+    {
+      "id": "silly-033",
+      "theme": "historical",
+      "title": "Roman senator",
+      "aspect_ratio": "3:4",
+      "mood_override": "default",
+      "scene": "as a Roman senator in a toga with a laurel wreath, standing at a marble rostrum in a sunlit forum, arm outstretched mid-oration, other senators listening from stone benches"
+    },
+    {
+      "id": "silly-034",
+      "theme": "historical",
+      "title": "Victorian detective",
+      "aspect_ratio": "3:4",
+      "mood_override": "ominous",
+      "scene": "as a Victorian-era detective in a long dark overcoat and tweed cap, gas lamp illuminating his gaunt features, holding a magnifying glass up to an ornate doorknob, cobblestone London street, thick fog"
+    },
+    {
+      "id": "silly-035",
+      "theme": "historical",
+      "title": "1920s speakeasy patron",
+      "aspect_ratio": "3:4",
+      "mood_override": "ominous",
+      "scene": "as a sharply dressed 1920s speakeasy regular at a small corner table, pinstripe suit, fedora tilted low, a glass of amber liquor in hand, smoky jazz-age lounge, dim beaded-lamp light"
+    },
+    {
+      "id": "silly-036",
+      "theme": "wholesome",
+      "title": "Cooking class teacher",
+      "aspect_ratio": "3:4",
+      "mood_override": "uplifting",
+      "scene": "teaching a home-kitchen cooking class in an apron, smiling warmly as he shows a small group of students how to fold dumplings, flour everywhere, morning sunlight through the window, chalkboard menu behind him"
+    },
+    {
+      "id": "silly-037",
+      "theme": "wholesome",
+      "title": "Fireplace reading",
+      "aspect_ratio": "3:4",
+      "mood_override": "tender",
+      "scene": "curled in a deep armchair by a crackling fireplace reading a well-worn hardcover book, a sleeping tabby cat draped across his lap, mug of tea on the side table, soft golden light, snowing outside the window"
+    },
+    {
+      "id": "silly-038",
+      "theme": "wholesome",
+      "title": "Tomato-greenhouse gardener",
+      "aspect_ratio": "3:4",
+      "mood_override": "uplifting",
+      "scene": "in a canvas apron and wide-brimmed sunhat watering ripe tomato plants in a glass greenhouse, dappled sunlight streaming through the panes, gardening shears in his belt, content expression"
+    },
+    {
+      "id": "silly-039",
+      "theme": "wholesome",
+      "title": "Calligraphy teacher",
+      "aspect_ratio": "3:4",
+      "mood_override": "tender",
+      "scene": "patiently showing a young student how to hold a dip pen at a sunlit wooden desk, ink bottles and practice sheets spread around, soft-focus bookshelf background, both of them concentrating"
+    },
+    {
+      "id": "silly-040",
+      "theme": "wholesome",
+      "title": "Duck pond",
+      "aspect_ratio": "3:4",
+      "mood_override": "uplifting",
+      "scene": "on a park bench by a glassy pond feeding a flock of friendly ducks from a paper bag of crumbs, one duck boldly stepping onto his shoe, autumn leaves on the water, early-morning golden light"
+    },
+    {
+      "id": "silly-041",
+      "theme": "wholesome",
+      "title": "Pie at the window",
+      "aspect_ratio": "3:4",
+      "mood_override": "uplifting",
+      "scene": "placing a freshly baked lattice-top fruit pie on a farmhouse kitchen window sill to cool, warm late-afternoon sunlight, gingham curtains, flour dusted on his apron, a bluebird watching from a nearby branch"
+    },
+    {
+      "id": "silly-042",
+      "theme": "surreal",
+      "title": "Pigeon snowglobe",
+      "aspect_ratio": "3:4",
+      "mood_override": "default",
+      "scene": "standing inside a massive snowglobe filled with floating pigeons instead of snowflakes, his hand pressed against the curved glass from within, a giant hand visible outside shaking the globe, dreamlike lighting"
+    },
+    {
+      "id": "silly-043",
+      "theme": "surreal",
+      "title": "Melting-clock desert",
+      "aspect_ratio": "16:9",
+      "mood_override": "ominous",
+      "scene": "in a flat orange-gold Dalí-esque desert, a melting pocketwatch draped over his shoulder like a scarf, other melting clocks across the horizon, elongated shadow stretching far behind him, dreamlike surrealism"
+    },
+    {
+      "id": "silly-044",
+      "theme": "surreal",
+      "title": "Disobedient shadow",
+      "aspect_ratio": "3:4",
+      "mood_override": "ominous",
+      "scene": "standing on an empty cobblestone plaza at sunset while his own long shadow is visibly walking in a completely different direction, the shadow waving back at him, uncanny lighting, deep magenta sky"
+    },
+    {
+      "id": "silly-045",
+      "theme": "surreal",
+      "title": "Mirror hall",
+      "aspect_ratio": "3:4",
+      "mood_override": "default",
+      "scene": "standing in a hall of hundreds of small antique mirrors of varying sizes, every reflection showing him doing a slightly different action — waving, drinking coffee, reading — only the central real him stands still"
+    }
+  ]
+}

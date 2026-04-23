@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#D4AF37" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>Meme Streeps</title>
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="icon" href="/icon-192.png" type="image/png" />
-  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <title data-streep="Meme Streeps" data-walken="Walken Walks">Meme Streeps</title>
+  <link rel="manifest" href="%BASE_URL%manifest.json" />
+  <link rel="icon" href="%BASE_URL%icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="%BASE_URL%icon-192.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet" />
@@ -19,15 +19,15 @@
     <header class="app-header">
       <div class="app-header__spacer"></div>
       <div class="app-header__title">
-        <h1 class="app-title">MEME STREEPS</h1>
-        <p class="app-subtitle">All Streep. No sleep.</p>
+        <h1 class="app-title" data-streep="MEME STREEPS" data-walken="WALKEN WALKS">MEME STREEPS</h1>
+        <p class="app-subtitle" data-streep="All Streep. No sleep." data-walken="Walken the walken.">All Streep. No sleep.</p>
       </div>
       <button id="gallery-btn" class="icon-btn" aria-label="Gallery">▦</button>
     </header>
 
     <div class="vote-counter">
-      <span class="vote-label vote-label--left">← For the Streeps <span id="count-left">0</span></span>
-      <span class="vote-label vote-label--right"><span id="count-right">0</span> Streeps Ahead →</span>
+      <span class="vote-label vote-label--left"><span data-streep="← For the Streeps" data-walken="← Walken Away">← For the Streeps</span> <span id="count-left">0</span></span>
+      <span class="vote-label vote-label--right"><span id="count-right">0</span> <span data-streep="Streeps Ahead →" data-walken="Keep Walken! →">Streeps Ahead →</span></span>
     </div>
 
     <div class="card-container">
@@ -65,8 +65,8 @@
         </div>
 
         <!-- Swipe indicators -->
-        <div class="swipe-badge swipe-badge--left">FOR THE STREEPS</div>
-        <div class="swipe-badge swipe-badge--right">STREEPS AHEAD</div>
+        <div class="swipe-badge swipe-badge--left" data-streep="FOR THE STREEPS" data-walken="WALKEN AWAY">FOR THE STREEPS</div>
+        <div class="swipe-badge swipe-badge--right" data-streep="STREEPS AHEAD" data-walken="KEEP WALKEN!">STREEPS AHEAD</div>
       </div>
 
       <div class="card-placeholder" id="card-placeholder">
@@ -76,8 +76,8 @@
     </div>
 
     <div class="swipe-hints">
-      <span>← FOR THE STREEPS</span>
-      <span>STREEPS AHEAD →</span>
+      <span data-streep="← FOR THE STREEPS" data-walken="← WALKEN AWAY">← FOR THE STREEPS</span>
+      <span data-streep="STREEPS AHEAD →" data-walken="KEEP WALKEN! →">STREEPS AHEAD →</span>
     </div>
 
     <button id="shake-btn" class="shake-btn">📳 SHAKE IT</button>
@@ -87,12 +87,12 @@
   <section id="gallery-screen" class="gallery-screen" hidden>
     <header class="gallery-header">
       <button id="gallery-back" class="icon-btn" aria-label="Back">←</button>
-      <h2 class="gallery-header__title">YOUR STREEPS</h2>
+      <h2 class="gallery-header__title" data-streep="YOUR STREEPS" data-walken="YOUR WALKENS">YOUR STREEPS</h2>
       <span id="gallery-count" class="gallery-header__count">0</span>
     </header>
     <div id="gallery-grid" class="gallery-grid"></div>
     <p id="gallery-empty" class="gallery-empty" hidden>
-      No streeps yet.<br>Shake to start.
+      <span data-streep="No streeps yet." data-walken="No Walkens yet.">No streeps yet.</span><br><span data-streep="Shake to start." data-walken="Shake to start.">Shake to start.</span>
     </p>
   </section>
 
@@ -100,7 +100,7 @@
   <div id="motion-modal" class="motion-modal" hidden>
     <div class="motion-modal__content">
       <h2>Shake to Generate</h2>
-      <p>Meme Streeps wants to detect when you shake your phone to generate new quotes.</p>
+      <p data-streep="Meme Streeps wants to detect when you shake your phone to generate new quotes." data-walken="Walken Walks wants to detect when you shake your phone to generate new quotes.">Meme Streeps wants to detect when you shake your phone to generate new quotes.</p>
       <button id="motion-allow" class="motion-modal__btn">LET'S GO</button>
     </div>
   </div>
