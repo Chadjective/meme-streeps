@@ -1,19 +1,37 @@
 // Bump CACHE_VERSION to force all clients to drop the old cache and refetch.
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 const CACHE_NAME = `meme-streeps-${CACHE_VERSION}`;
 
+// Base path is inferred from the SW's own URL, so this works both on the old
+// root deploy (/) and on GitHub Pages (/meme-streeps/). The SW script lives
+// alongside index.html, so stripping `sw.js` off the path gives the base.
+const BASE = self.location.pathname.replace(/sw\.js$/, '');
+
 const APP_SHELL = [
-  '/',
-  '/index.html',
-  '/manifest.json',
+  BASE,
+  BASE + 'index.html',
+  BASE + 'manifest.json',
 ];
 
 // ─── Install ─────────────────────────────────────────────────────────────────
-// Pre-cache the app shell. skipWaiting forces the new SW to activate immediately
-// instead of waiting for all tabs to close.
+// Try to precache the app shell, but tolerate individual 404s so install
+// completes even if one file is missing. If install rejects, the new SW never
+// activates and clients stay stuck on the old SW — that's how we got stuck
+// serving stale content after the GH Pages base-path change.
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL))
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
+      await Promise.all(
+        APP_SHELL.map((url) =>
+          fetch(url)
+            .then((res) => {
+              if (res.ok) return cache.put(url, res);
+            })
+            .catch(() => { /* swallow per-file failures */ })
+        )
+      );
+    })()
   );
   self.skipWaiting();
 });
