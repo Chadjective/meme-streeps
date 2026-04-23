@@ -140,21 +140,22 @@ shareBtn.addEventListener('click', async (e) => {
   shareBtn.addEventListener(ev, (e) => e.stopPropagation());
 });
 
-// Register service worker (production only — dev caches cause stale assets)
+// Aggressively unregister ANY existing service worker and nuke all caches.
+// The previous SW poisoned returning visitors with stale content when we
+// switched from root to /meme-streeps/ subpath. Keeping this cleanup in
+// both dev and prod until the SW design is rewritten base-path-aware.
 if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then((regs) => {
+    regs.forEach((r) => r.unregister());
+  }).catch(() => { /* ignore */ });
+  if ('caches' in window) {
+    caches.keys().then((keys) => keys.forEach((k) => caches.delete(k))).catch(() => { /* ignore */ });
+  }
+  // Register the kill-switch SW so any client still controlled by an old SW
+  // picks up the self-destructing one on next navigation.
   if (import.meta.env.PROD) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {
-        // SW registration failed, app still works
-      });
+      navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
     });
-  } else {
-    // In dev, make sure no stale SW is hanging around
-    navigator.serviceWorker.getRegistrations().then((regs) => {
-      regs.forEach((r) => r.unregister());
-    });
-    if ('caches' in window) {
-      caches.keys().then((keys) => keys.forEach((k) => caches.delete(k)));
-    }
   }
 }
