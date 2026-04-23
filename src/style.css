@@ -12,6 +12,20 @@
   --card-image-height: 420px;
 }
 
+/* ── V2 Walken palette (Icy Noir) ──
+   Overrides the core vars when the app is in Walken mode. Chrome-silver
+   primary for his slicked hair, electric cyan for the "keep" accent,
+   crimson for "walken away", deep navy-black background. */
+html[data-mode="walken"] {
+  --gold: #C9D4E0;
+  --gold-dim: rgba(201, 212, 224, 0.3);
+  --gold-bright: rgba(201, 212, 224, 0.65);
+  --dark: #06080D;
+  --smoke: #0F1419;
+  --red: #E53935;
+  --green: #00E5FF;
+}
+
 /* ── Reset & Base ── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -288,7 +302,7 @@ body::before {
   transform: rotateY(180deg);
   background: var(--smoke);
   min-height: var(--card-image-height);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--gold-dim);
 }
 
 .meme-card__back-content {
@@ -342,7 +356,7 @@ body::before {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 3px 8px;
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid var(--gold-dim);
   color: var(--white-muted);
   border-radius: 2px;
 }
@@ -533,7 +547,7 @@ body::before {
       2px -2px 0 #000, -2px 2px 0 #000,
       0 2px 0 #000, 0 -2px 0 #000,
       2px 0 0 #000, -2px 0 0 #000,
-      0 0 10px rgba(212, 175, 55, 0.3);
+      0 0 10px var(--gold-dim);
   }
   50% {
     text-shadow:
@@ -541,8 +555,8 @@ body::before {
       2px -2px 0 #000, -2px 2px 0 #000,
       0 2px 0 #000, 0 -2px 0 #000,
       2px 0 0 #000, -2px 0 0 #000,
-      0 0 18px rgba(212, 175, 55, 0.6),
-      0 0 35px rgba(212, 175, 55, 0.3);
+      0 0 18px var(--gold-bright),
+      0 0 35px var(--gold-dim);
   }
 }
 

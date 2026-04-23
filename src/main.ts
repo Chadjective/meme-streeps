@@ -12,6 +12,13 @@ const MODE: 'streep' | 'walken' = urlParams.get('v') === 'walken' ? 'walken' : '
 setCardMode(MODE);
 document.documentElement.dataset.mode = MODE;
 
+// Update the mobile browser chrome color so PWA install/share
+// previews match the active theme.
+const themeColorMeta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+if (themeColorMeta) {
+  themeColorMeta.content = MODE === 'walken' ? '#C9D4E0' : '#D4AF37';
+}
+
 /**
  * Swaps every [data-streep][data-walken] element's text to the active mode.
  * This covers the header title, subtitle, vote counter labels, swipe badges,
