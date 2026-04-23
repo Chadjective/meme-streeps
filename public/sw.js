@@ -99,7 +99,7 @@ async function networkFirst(req) {
     const cached = await cache.match(req);
     if (cached) return cached;
     if (req.destination === 'document') {
-      const fallback = await cache.match('/index.html');
+      const fallback = await cache.match(BASE + 'index.html');
       if (fallback) return fallback;
     }
     return new Response('Offline', { status: 503 });
